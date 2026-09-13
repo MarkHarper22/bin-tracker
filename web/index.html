@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <title>Bin Tracker</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f766e' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M3 7l9-4 9 4-9 4-9-4z'/%3E%3Cpath d='M3 7v10l9 4 9-4V7'/%3E%3Cpath d='M12 11v10'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="app.css">
+  <style id="page-style"></style>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar no-print">
+    <a class="brand" href="#/bins" aria-label="Bin Tracker home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+      <span>Bin Tracker</span>
+    </a>
+    <form class="quick-find hide-mobile" role="search" id="quick-find">
+      <input type="search" name="q" placeholder="Search bins and items…" aria-label="Search bins and items" autocomplete="off">
+    </form>
+    <nav class="nav" aria-label="Main">
+      <a href="#/bins" data-route="bins">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+        <span>Bins</span>
+      </a>
+      <a href="#/scan" data-route="scan">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M7 12h10"/></svg>
+        <span>Scan</span>
+      </a>
+      <a href="#/labels" data-route="labels">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+        <span>Labels</span>
+      </a>
+      <a href="#/history" data-route="history">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span>History</span>
+      </a>
+      <a href="#/settings" data-route="settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="view" class="container" tabindex="-1">
+    <p class="muted">Loading…</p>
+  </main>
+
+  <div id="toasts" class="no-print" aria-live="polite"></div>
+
+  <noscript><p class="container">Bin Tracker needs JavaScript turned on in your browser.</p></noscript>
+</body>
+</html>

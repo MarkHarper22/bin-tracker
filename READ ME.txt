@@ -1,0 +1,85 @@
+BIN TRACKER - QUICK START
+=========================
+
+Bin Tracker keeps track of your storage bins: where each bin is and what's
+inside. It runs entirely on this computer. No internet or account needed.
+
+
+STARTING IT
+-----------
+Mac
+  Double-click "BinTracker". A Terminal window opens and your web browser
+  shows Bin Tracker.
+  If macOS says it can't verify the developer: open System Settings >
+  Privacy & Security, scroll down, click "Open Anyway", then open it again.
+
+Windows
+  Double-click "BinTracker.exe". A black window opens and your web browser
+  shows Bin Tracker.
+  If SmartScreen appears, click "More info" > "Run anyway".
+  When Windows Firewall asks, allow access on PRIVATE networks. Phones need
+  this to connect.
+
+Leave that Terminal/black window open while you use Bin Tracker. Close it,
+or use Settings > Stop Bin Tracker, to stop the app.
+
+
+YOUR DATA
+---------
+Everything is saved in the "BinTracker-Data" folder next to the app:
+  bintracker.db   your bins, items, and history
+  backups         automatic backups (daily, when something changed)
+
+To move Bin Tracker to another computer, stop it and copy the whole folder
+(the app plus BinTracker-Data). The same data works on Mac and Windows.
+For extra safety, copy the backups folder to a USB drive now and then.
+
+
+USING A PHONE
+-------------
+1. Connect the phone to the same Wi-Fi network as the computer.
+2. On the computer, open Settings in Bin Tracker and scan the
+   "Connect a phone" QR code with the phone's camera.
+3. The phone warns that the connection isn't private. This is expected:
+   Bin Tracker creates its own security certificate for your network.
+   iPhone: Show Details > visit this website.
+   Android: Advanced > Proceed.
+4. Open the Scan tab and allow camera access.
+
+
+HANDHELD SCANNERS
+-----------------
+USB or Bluetooth barcode/QR scanners work on every screen. Just scan a label.
+Scan a label that isn't set up yet, and Bin Tracker offers to create the bin.
+To move many bins at once: Scan tab > "Move bins", type the new location,
+then scan each bin.
+
+
+PRINTING LABELS
+---------------
+Labels tab > choose bins (or "Pre-print labels for new bins") > choose
+QR code or Barcode > choose your label paper > Print.
+
+In the print dialog:
+  - Margins: None
+  - Scale: 100% (or "Actual size")
+  - Headers and footers: off
+  - For label printers (Dymo, Brother, Zebra), choose the matching label size.
+
+If sheet labels print slightly off, use "Labels printing off-center?" on the
+Labels tab to nudge them.
+
+
+TROUBLESHOOTING
+---------------
+"Port 8420 is already in use"
+  Another program is using that port. Start Bin Tracker from a terminal
+  with a different port, e.g.:   BinTracker -port 9420
+
+A phone can't connect
+  Make sure it's on the same Wi-Fi network (not a guest network) and that the
+  computer's firewall allows Bin Tracker.
+
+The phone camera won't start
+  Use the https:// address shown in Settings > Connect a phone. Or tap
+  "Take a photo of a label" on the Scan tab, which works on any address.

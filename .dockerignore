@@ -1,0 +1,7 @@
+dist
+BinTracker-Data
+dev-data
+*.zip
+.DS_Store
+.git
+.claude

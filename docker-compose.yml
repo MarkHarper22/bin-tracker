@@ -1,0 +1,28 @@
+# Bin Tracker server
+#   Start:   docker compose up -d         (pulls the published image)
+#   Update:  docker compose pull && docker compose up -d
+#   Open:    http://<this server's address>:8420
+#   Stop:    docker compose down          (your data stays in the bintracker-data volume)
+#
+# The image is private: run "docker login ghcr.io" once on the server first.
+# To build from this folder instead of pulling: docker compose up -d --build
+
+services:
+  bintracker:
+    image: ghcr.io/markharper22/bin-tracker:latest
+    build: .
+    container_name: bintracker
+    restart: unless-stopped
+    ports:
+      - "8420:8420" # web app
+      - "8421:8421" # HTTPS for phone camera scanning; keep the same number on both sides
+    environment:
+      TZ: "UTC" # your time zone, e.g. America/Chicago (used for backup file names)
+      # Optional: the exact link phones should open, if the automatic one is wrong,
+      # e.g. behind a reverse proxy with its own certificate:
+      # BINTRACKER_PHONE_URL: "https://bins.example.com"
+    volumes:
+      - bintracker-data:/data
+
+volumes:
+  bintracker-data:

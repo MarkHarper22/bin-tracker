@@ -1,0 +1,11 @@
+# Build output and local data
+dist/
+BinTracker-Data/
+dev-data/
+*.zip
+*.db
+*.db-shm
+*.db-wal
+*.pem
+.DS_Store
+.claude/
